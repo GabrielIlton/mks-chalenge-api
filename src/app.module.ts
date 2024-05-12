@@ -21,10 +21,10 @@ import { AuthMiddleware } from './middlewares/auth.middleware';
     MovieModule,
     AuthModule,
     DbModule,
-    CacheModule.registerAsync({
-      useFactory: async () => ({ store: await redisStore({ ttl: 10 * 1000 }) }),
-      isGlobal: true,
-    }),
+    // CacheModule.registerAsync({
+    //   useFactory: async () => ({ store: await redisStore({ ttl: 10 * 1000 }) }),
+    //   isGlobal: true,
+    // }),
   ],
   providers: [
     {
