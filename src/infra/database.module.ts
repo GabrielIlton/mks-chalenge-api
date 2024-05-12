@@ -14,6 +14,7 @@ import { Module } from '@nestjs/common';
         database: configService.get<string>('DB_NAME'),
         entities: [__dirname + '/entities/**'],
         migrations: [__dirname + '/migrations/*.ts'],
+        ssl: true,
         synchronize: false,
       }),
       inject: [ConfigService],
